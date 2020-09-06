@@ -42,7 +42,7 @@
         },
         {
           "type": "object",
-          "required": "duration",
+          "required": ["duration"],
           "properties": {
             "duration": {
               "description": "Duration in seconds the timer will run.",
