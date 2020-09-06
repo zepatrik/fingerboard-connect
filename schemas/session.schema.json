@@ -15,7 +15,8 @@
     "hole": {
       "description": "A single hole on the board.",
       "type": "integer",
-      "minimum": -1
+      "minimum": 0,
+      "maximum": 19
     },
     "baseExercise": {
       "type": "object",
