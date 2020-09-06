@@ -3,7 +3,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from 'react-native-vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 function HomeScreen() {
@@ -41,7 +41,7 @@ export default function App() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName
             if (route.name === 'Home') {
-              iconName = focused ? 'ios-list' : 'ios-list-box'
+              iconName = focused ? 'ios-list-box' : 'ios-list'
             } else if (route.name === 'Social') {
               iconName = focused ? 'md-share' : 'md-share'
             } else if (route.name === 'Add') {
@@ -49,7 +49,7 @@ export default function App() {
             }
 
             // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />
+            return <Ionicons name={iconName} size={24} color={color} />
           }
         })}
         tabBarOptions={{
