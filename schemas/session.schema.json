@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "$ref": "#/definitions/durationExercise"
+      },
+      {
+        "$ref": "#/definitions/repetitionExercise"
+      }
+    ]
+  },
+  "definitions": {
+    "hole": {
+      "description": "A single hole on the board.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 19
+    },
+    "baseExercise": {
+      "type": "object",
+      "properties": {
+        "pattern": {
+          "description": "Tuple of left and right holes. If no pattern is present, it is a break.",
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "$ref": "#/definitions/hole"
+          }
+        },
+        "notes": {
+          "description": "Notes regarding this exercise.",
+          "type": "string"
+        }
+      }
+    },
+    "durationExercise": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/baseExercise"
+        },
+        {
+          "type": "object",
+          "required": ["duration"],
+          "properties": {
+            "duration": {
+              "description": "Duration in seconds the timer will run.",
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      ]
+    },
+    "repetitionExercise": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/baseExercise"
+        },
+        {
+          "type": "object",
+          "required": ["repetitions"],
+          "properties": {
+            "repetitions": {
+              "description": "Number of repetitions",
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      ]
+    }
+  }
+}
