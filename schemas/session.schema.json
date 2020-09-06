@@ -23,8 +23,8 @@
         "pattern": {
           "description": "Tuple of left and right holes. If no pattern is present, it is a break.",
           "type": "array",
-          "minLength": 2,
-          "maxLength": 2,
+          "minItems": 2,
+          "maxItems": 2,
           "items": {
             "$ref": "#/definitions/hole"
           }
