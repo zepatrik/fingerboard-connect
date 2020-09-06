@@ -5,8 +5,6 @@
     "name": "fingerboard-connect",
     "slug": "fingerboard-connect",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"]
   }
 }
