@@ -1,10 +1,9 @@
-import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import EditExercise from './screens/EditExercise'
 
 function HomeScreen() {
   return (
@@ -49,7 +48,7 @@ export default function App() {
             }
 
             // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />
+            return <Text>Foo</Text>
           }
         })}
         tabBarOptions={{
@@ -58,7 +57,7 @@ export default function App() {
         }}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Add" component={AddSession} />
+        <Tab.Screen name="Add" component={EditExercise} />
         <Tab.Screen name="Social" component={Social} />
       </Tab.Navigator>
     </NavigationContainer>
