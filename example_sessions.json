@@ -1,0 +1,10 @@
+{
+  "name": "Super easy session.",
+  "exercises": [
+    {
+      "duration": 10,
+      "notes": "hold",
+      "pattern": [1, 2]
+    }
+  ]
+}
