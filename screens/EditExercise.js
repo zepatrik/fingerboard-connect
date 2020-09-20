@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
-import { View, TextInput, Text } from 'react-native'
+import { View, TextInput, Text,StyleSheet } from 'react-native'
+import FingerBoard from "../src/assets/fingerboard-web.jsx"
 
-const FingerBoard = () => (
-  <View style={{ width: 100, height: 100, backgroundColor: '#ff0000' }} />
-)
 
 const EditExercise = () => {
   const [notes, setNotes] = useState('asdf')
 
   return (
-    <View>
-      <FingerBoard />
+    <View style={styles.container}>
+      <FingerBoard style={styles.FingerBoard}/>
       <View style={{ flexDirection: 'row' }}>
         <Text>Notes: </Text>
         <TextInput
@@ -26,5 +24,23 @@ const EditExercise = () => {
     </View>
   )
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+		flex: 1,
+		justifyContent: 'center', 
+		alignSelf: 'center'
+	},
+  FingerBoard: {
+
+
+  }
+
+
+
+})
+
+
 
 export default EditExercise
