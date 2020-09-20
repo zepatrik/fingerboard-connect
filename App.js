@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import EditExercise from './screens/EditExercise'
 
-import HistoyScreen from './HistoryScreen'
+import HistoyScreen from './screens/HistoryScreen'
 
 function HomeScreen() {
   return (
@@ -48,6 +48,8 @@ export default function App() {
               iconName = focused ? 'md-share' : 'md-share'
             } else if (route.name === 'Add') {
               iconName = focused ? 'ios-add-circle' : 'ios-add-circle-outline'
+            } else if (route.name === 'Exercise'){
+              iconName = focused ? 'md-star' : 'md-star-outline' 
             }
 
             // You can return any component that you like here!
@@ -61,7 +63,7 @@ export default function App() {
       >
         <Tab.Screen name="Home" component={HistoyScreen} />
         <Tab.Screen name="Add" component={AddSession} />
-        <Tab.Screen name="Edit" component={EditExercise} />
+        <Tab.Screen name="Exercise" component={EditExercise} />
         <Tab.Screen name="Social" component={Social} />
       </Tab.Navigator>
     </NavigationContainer>
