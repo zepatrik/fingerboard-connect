@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
+import HistoyScreen from './HistoryScreen'
+
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -41,7 +43,7 @@ export default function App() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName
             if (route.name === 'Home') {
-              iconName = focused ? 'ios-list' : 'ios-list-box'
+              iconName = focused ? 'ios-list-box' : 'ios-list'
             } else if (route.name === 'Social') {
               iconName = focused ? 'md-share' : 'md-share'
             } else if (route.name === 'Add') {
@@ -57,7 +59,7 @@ export default function App() {
           inactiveTintColor: 'gray'
         }}
       >
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={HistoyScreen} />
         <Tab.Screen name="Add" component={AddSession} />
         <Tab.Screen name="Social" component={Social} />
       </Tab.Navigator>
