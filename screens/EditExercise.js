@@ -1,9 +1,43 @@
 import React, { useState } from 'react'
 import { View, TextInput, Text, Switch, Button } from 'react-native'
+import Svg, { Rect } from 'react-native-svg'
 
-const FingerBoard = () => (
-  <View style={{ width: 100, height: 100, backgroundColor: '#ff0000' }} />
-)
+const FingerBoard = ({ pattern, setPattern }) => {
+  const onPressHandler = (id) => () =>
+    setPattern(
+      pattern.indexOf(id) >= 0
+        ? pattern.filter((x) => x !== id)
+        : [...pattern, id]
+    )
+  const getFill = (id) => (pattern.indexOf(id) >= 0 ? 'red' : 'white')
+
+  return (
+    <Svg height="50%" width="50%" viewBox="0 0 100 100">
+      <Rect
+        x="20"
+        y="20"
+        width="50"
+        height="20"
+        stroke="black"
+        strokeWidth="2"
+        fill={getFill(0)}
+        rx="10"
+        onPress={onPressHandler(0)}
+      />
+      <Rect
+        x="0"
+        y="0"
+        width="30"
+        height="20"
+        stroke="black"
+        strokeWidth="2"
+        fill={getFill(1)}
+        rx="10"
+        onPress={onPressHandler(1)}
+      />
+    </Svg>
+  )
+}
 
 const repetitionType = 'repetition'
 const durationType = 'duration'
@@ -21,20 +55,20 @@ const EditExercise = (
   { onSubmit = console.log } = { onSubmit: console.log }
 ) => {
   const [notes, setNotes] = useState('asdf')
-  const [type, setType] = useState('')
-  const [pattern, setPattern] = useState([-1, -1])
+  const [type, setType] = useState(repetitionType)
+  const [pattern, setPattern] = useState([])
   const [count, setCount] = useState(1)
 
   return (
     <View>
-      <FingerBoard />
+      <FingerBoard pattern={pattern} setPattern={setPattern} />
       <View style={styles.inputRow}>
-        <Text>{repetitionType}</Text>
+        <Text>{durationType}</Text>
         <Switch
           value={type === repetitionType}
           onValueChange={(v) => setType(v ? repetitionType : durationType)}
         />
-        <Text>{durationType}</Text>
+        <Text>{repetitionType}</Text>
       </View>
       <View style={styles.inputRow}>
         <Text>Count: </Text>
