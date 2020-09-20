@@ -61,7 +61,7 @@ export default function App() {
       >
         <Tab.Screen name="Home" component={HistoyScreen} />
         <Tab.Screen name="Add" component={AddSession} />
-        <Tab.Screen name="Add" component={EditExercise} />
+        <Tab.Screen name="Edit" component={EditExercise} />
         <Tab.Screen name="Social" component={Social} />
       </Tab.Navigator>
     </NavigationContainer>
