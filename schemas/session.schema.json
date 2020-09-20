@@ -1,15 +1,33 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "type": "array",
-  "items": {
-    "oneOf": [
-      {
-        "$ref": "#/definitions/durationExercise"
-      },
-      {
-        "$ref": "#/definitions/repetitionExercise"
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of this session"
+    },
+    "exercises": {
+      "description": "The exercises that the session consists of",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/durationExercise"
+          },
+          {
+            "$ref": "#/definitions/repetitionExercise"
+          }
+        ]
       }
-    ]
+    },
+    "records": {
+      "description": "Historic records of executions of this session",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }
   },
   "definitions": {
     "hole": {
