@@ -44,7 +44,7 @@ return (<Svg width="90%" height="100" version="1.1" viewBox="0 0 184.92 43.212" 
     <Rect onPressIn={onGroupPress(15)} transform="scale(1,-1)" x="180.36" y="-528.84" width="141.92" height="84.611" ry="5.2904" fill="url(#linearGradient4976)" stroke="none" />
     <Rect onPressIn={onGroupPress(16)} transform="scale(1,-1)" x="322.26" y="-515.44" width="140.31" height="57.6" fill={setFill(16)} stroke={setFill(16)} strokeLinecap="butt" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.4895" />
     <Path d="m1030.9 528.84h-138.24m-570.19-13.32h144.09m-6.3-58.68 1.44 0.18 1.08 0.9 0.9 1.44 0.18 1.62m0 35.64v-23.22l0.54 1.98 1.26 1.44 1.8 0.54" strokeMiterlimit="10" strokeWidth="1.4396"/>
-    <Rect onPress={onGroupPress(17)} transform="scale(1,-1)" x="494.29" y="-380.54" width="229.35" height="27.675" rx="15.694" ry="13.516" fill={setFill(17)} stroke="#000" strokeLinecap="butt" strokeLinejoin="bevel" strokeMiterlimit="10" strokeWidth="1.8243" />
+    <Rect onPressIn={onGroupPress(17)} transform="scale(1,-1)" x="494.29" y="-380.54" width="229.35" height="27.675" rx="15.694" ry="13.516" fill={setFill(17)} stroke="#000" strokeLinecap="butt" strokeLinejoin="bevel" strokeMiterlimit="10" strokeWidth="1.8243" />
     <G transform="matrix(-.00297 1 -1 -.00297 317.25 366.57)">
     <Use width="100%" height="100%" xlinkHref="#C"/>
     </G>
