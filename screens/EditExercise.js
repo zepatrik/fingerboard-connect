@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, TextInput, Text, StyleSheet } from 'react-native'
+import { View, TextInput, Text, StyleSheet,Button } from 'react-native'
 import FingerBoard from '../src/assets/fingerboard-web.jsx'
 
 const repetitionType = 'repetition'
