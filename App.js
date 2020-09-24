@@ -48,8 +48,8 @@ export default function App() {
               iconName = focused ? 'md-share' : 'md-share'
             } else if (route.name === 'Add') {
               iconName = focused ? 'ios-add-circle' : 'ios-add-circle-outline'
-            } else if (route.name === 'Exercise'){
-              iconName = focused ? 'md-star' : 'md-star-outline' 
+            } else if (route.name === 'Exercise') {
+              iconName = focused ? 'md-star' : 'md-star-outline'
             }
 
             // You can return any component that you like here!
