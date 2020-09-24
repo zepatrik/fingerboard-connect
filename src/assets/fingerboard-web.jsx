@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Svg, {Path,G,Defs,Rect,Stop,LinearGradient,SvgCssUri,Use} from 'react-native-svg'
 import { TouchableHighlight  } from "react-native"
 
-export default ({ pattern = [], setPattern = (pat)=> {pattern=pat; console.log(pattern)} }) => {
+export default ({ pattern=[14,15,16,17,18,19,20], setPattern }) => {
 
 const onGroupPress = (groupId) => () => setPattern(pattern.indexOf(groupId) !== -1 ? pattern.filter(e => e !== groupId) : [...pattern, groupId])
 const setFill = (groupId) => ( pattern.indexOf(groupId) !== -1 ? "red" : "white"  )
@@ -19,19 +19,19 @@ return (<Svg width="698.91" height="163.32" version="1.1" viewBox="0 0 184.92 43
     </clipPath>
     <Path id="C" d="M14.13 0c0 7.787-6.3 14.106-14.087 14.13S-14.082 7.874-14.13.087"/>
     <LinearGradient id="linearGradient4976" x1="250.85" x2="251.49" y1="-516.35" y2="-467.76" gradientTransform="matrix(1 0 0 1.1679 0 88.813)" gradientUnits="userSpaceOnUse">
-    <Stop stopColor="#f7aba2" offset="0"/>
-    <Stop stopColor="#f7aba2" stopOpacity="0" offset="1"/>
+    <Stop stopColor={setFill(15)} offset="0"/>
+    <Stop stopColor={setFill(15)} stopOpacity="0" offset="1"/>
     </LinearGradient>
     <LinearGradient id="linearGradient5008" x1="958.73" x2="959.05" y1="-513.97" y2="-456.54" gradientUnits="userSpaceOnUse">
-    <Stop stopColor="#1caba2" offset="0"/>
-    <Stop stopColor="#1caba2" stopOpacity="0" offset="1"/>
+    <Stop stopColor={setFill(18)} offset="0"/>
+    <Stop stopColor={setFill(18)} stopOpacity="0" offset="1"/>
     </LinearGradient>
     </Defs>
     <G transform="matrix(.21706 0 0 -.21706 -38.991 114.95)">
     <G clipPath="url(#A)" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.44">
-    <Rect transform="scale(1,-1)" x="888.98" y="-528.84" width="141.92" height="84.611" ry="4.6926" fill="url(#linearGradient5008)" stroke="none" />
-    <Rect transform="scale(1,-1)" x="748.35" y="-515.52" width="140.31" height="57.6" fill="#f7aba2" stroke="#f7aba2" strokeLinecap="butt" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.4895" />
-    <Rect transform="scale(1,-1)" x="604.44" y="-515.52" width="143.22" height="38.778" rx="0" ry="0" fill="#ca2ba2" stroke="none" />
+    <Rect onPress={onGroupPress(18)} transform="scale(1,-1)" x="888.98" y="-528.84" width="141.92" height="84.611" ry="4.6926" fill="url(#linearGradient5008)" stroke="none" />
+    <Rect onPress={onGroupPress(19)} transform="scale(1,-1)" x="748.35" y="-515.52" width="140.31" height="57.6" fill={setFill(19)} stroke={setFill(19)} strokeLinecap="butt" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.4895" />
+    <Rect onPress={onGroupPress(20)} transform="scale(1,-1)" x="604.44" y="-515.52" width="143.22" height="38.778" rx="0" ry="0" fill={setFill(20)} stroke="none" />
     <Path d="m888.66 515.52h0.36m0-52.2v61.92m-138.06-68.4-1.44 0.18-1.08 0.9-0.9 1.44-0.18 1.62m0 12.42-0.54 1.98-1.26 1.44-1.8 0.54m3.6 19.26v-35.64"/>
     <Path d="m1030.9 528.84v-42.66"/>
     <Path d="m1030.9 486.18v-154.98m-142.24 184.32h-144"/>
@@ -39,11 +39,11 @@ return (<Svg width="698.91" height="163.32" version="1.1" viewBox="0 0 184.92 43
     <G transform="rotate(89.994 183.58 709)">
     <Path d="m3.5 0a3.51 3.51 0 0 1-3.5 3.51"/>
     </G>
-    <Rect transform="scale(1,-1)" x="463.8" y="-515.75" width="143.22" height="38.82" rx="0" ry="0" fill="#3691a2" stroke="none" />
-    <Rect transform="scale(1,-1)" x="180.36" y="-528.84" width="141.92" height="84.611" ry="5.2904" fill="url(#linearGradient4976)" stroke="none" />
-    <Rect transform="scale(1,-1)" x="322.26" y="-515.44" width="140.31" height="57.6" fill="#bd2ba2" stroke="#bd2ba2" strokeLinecap="butt" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.4895" />
+    <Rect onPress={onGroupPress(14)} transform="scale(1,-1)" x="463.8" y="-515.75" width="143.22" height="38.82" rx="0" ry="0" fill={setFill(14)} stroke="none" />
+    <Rect onPress={onGroupPress(15)} transform="scale(1,-1)" x="180.36" y="-528.84" width="141.92" height="84.611" ry="5.2904" fill="url(#linearGradient4976)" stroke="none" />
+    <Rect onPress={onGroupPress(16)} transform="scale(1,-1)" x="322.26" y="-515.44" width="140.31" height="57.6" fill={setFill(16)} stroke={setFill(16)} strokeLinecap="butt" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="1.4895" />
     <Path d="m1030.9 528.84h-138.24m-570.19-13.32h144.09m-6.3-58.68 1.44 0.18 1.08 0.9 0.9 1.44 0.18 1.62m0 35.64v-23.22l0.54 1.98 1.26 1.44 1.8 0.54" strokeMiterlimit="10" strokeWidth="1.4396"/>
-    <Rect transform="scale(1,-1)" x="494.29" y="-380.54" width="229.35" height="27.675" rx="15.694" ry="13.516" fill="#362ba2" stroke="#000" strokeLinecap="butt" strokeLinejoin="bevel" strokeMiterlimit="10" strokeWidth="1.8243" />
+    <Rect onPress={onGroupPress(17)} transform="scale(1,-1)" x="494.29" y="-380.54" width="229.35" height="27.675" rx="15.694" ry="13.516" fill={setFill(17)} stroke="#000" strokeLinecap="butt" strokeLinejoin="bevel" strokeMiterlimit="10" strokeWidth="1.8243" />
     <G transform="matrix(-.00297 1 -1 -.00297 317.25 366.57)">
     <Use width="100%" height="100%" xlinkHref="#C"/>
     </G>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { View, TextInput, Text, Switch, Button } from 'react-native'
 import Svg, { Rect } from 'react-native-svg'
-import { View, TextInput, Text,StyleSheet } from 'react-native'
+import { View, TextInput, Text,Button,StyleSheet } from 'react-native'
 import FingerBoard from "../src/assets/fingerboard-web.jsx"
 
 
@@ -9,6 +8,13 @@ const repetitionType = 'repetition'
 const durationType = 'duration'
 
 const styles = {
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
   inputRow: { flexDirection: 'row' },
   textInput: {
     borderWidth: 1,
@@ -26,8 +32,8 @@ const EditExercise = (
   const [count, setCount] = useState(1)
 
   return (
-    <View>
-      <FingerBoard />
+    <View style={styles.container}>
+      <FingerBoard pattern={pattern} setPattern= {setPattern}/>
       <View style={{ flexDirection: 'row' }}>
         <Text>Notes: </Text>
         <TextInput
@@ -46,13 +52,5 @@ const EditExercise = (
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignSelf: 'center'
-  },
-  FingerBoard: {}
-})
 
 export default EditExercise
