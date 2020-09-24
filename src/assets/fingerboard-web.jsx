@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Svg, {Path,G,Defs,Rect,Stop,LinearGradient,SvgCssUri,Use} from 'react-native-svg'
 import { TouchableHighlight  } from "react-native"
 
-export default ({ pattern=[14,15,16,17,18,19,20], setPattern }) => {
+
+export default ({ pattern, setPattern }) => {
 
 const onGroupPress = (groupId) => () => setPattern(pattern.indexOf(groupId) !== -1 ? pattern.filter(e => e !== groupId) : [...pattern, groupId])
 const setFill = (groupId) => ( pattern.indexOf(groupId) !== -1 ? "red" : "white"  )

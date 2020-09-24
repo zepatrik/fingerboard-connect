@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import Svg, { Rect } from 'react-native-svg'
-import { View, TextInput, Text,Button,StyleSheet } from 'react-native'
-import FingerBoard from "../src/assets/fingerboard-web.jsx"
-
+import { View, TextInput, Text, StyleSheet } from 'react-native'
+import FingerBoard from '../src/assets/fingerboard-web.jsx'
 
 const repetitionType = 'repetition'
 const durationType = 'duration'
