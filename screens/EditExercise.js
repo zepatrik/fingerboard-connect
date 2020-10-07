@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, TextInput, Text, StyleSheet,Button } from 'react-native'
+import { View, TextInput, Text, StyleSheet, Button } from 'react-native'
 import FingerBoard from '../src/assets/fingerboard-web.jsx'
 
 const repetitionType = 'repetition'
@@ -31,7 +31,7 @@ const EditExercise = (
 
   return (
     <View style={styles.container}>
-      <FingerBoard pattern={pattern} setPattern= {setPattern}/>
+      <FingerBoard pattern={pattern} setPattern={setPattern} />
       <View style={{ flexDirection: 'row' }}>
         <Text>Notes: </Text>
         <TextInput
@@ -49,6 +49,5 @@ const EditExercise = (
     </View>
   )
 }
-
 
 export default EditExercise
