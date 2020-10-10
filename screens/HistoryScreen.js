@@ -10,7 +10,7 @@ import {
 import IoniconsIcon from 'react-native-vector-icons/Ionicons'
 
 let screenwidth = Dimensions.get('window').width
-function HistoyScreen(props) {
+function HistoyScreen({navigation}) {
   const sessions = [
     {
       name: 'Sesstion1',
@@ -65,7 +65,7 @@ function HistoyScreen(props) {
         style={{ width: '100%' }}
         data={sessions}
         renderItem={({ item }) => (
-          <View style={styles.cards}>
+          <View style={styles.cards}  onStartShouldSetResponder={()=>navigation.navigate('Session')}>
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.dates}>
               {item.dates[0].toLocaleDateString()}

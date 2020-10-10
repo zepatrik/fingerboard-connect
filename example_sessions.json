@@ -5,6 +5,21 @@
       "duration": 10,
       "notes": "hold",
       "pattern": [1, 2]
+    },
+    {
+      "duration": 10,
+      "notes": "hold",
+      "pattern": [11, 3]
+    },
+    {
+      "duration": 10,
+      "notes": "hold",
+      "pattern": [6, 3]
+    },
+    {
+      "duration": 10,
+      "notes": "hold",
+      "pattern": [10, 5]
     }
   ]
 }

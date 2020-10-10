@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
-import {  Text, Button } from 'react-native'
+import {  Text, Button,View } from 'react-native'
 import ExerciseDetails from '../components/ExerciseDetails'
 import ExerciseTimeline from '../components/ExerciseTimeline'
+import expData from '../example_sessions.json'
 
 const SessionScreen = ({ session }) => {
   const [activeExercise, setActiveExercise] = useState(0)
 
-  return (<>
-    <Text>{session.name}</Text>
-    <ExerciseTimeline session={session} activeExercise={activeExercise} setActiveExercise={setActiveExercise} />
-    <ExerciseDetails session={session} activeExercise={activeExercise} setActiveExercise={setActiveExercise} />
+  return (<View>
+    <Text>Test</Text>
+    {//<ExerciseTimeline activeExercise={activeExercise} setActiveExercise={setActiveExercise} />
+    }
+    <ExerciseDetails session={expData} activeExercise={activeExercise} setActiveExercise={setActiveExercise} />
     <Button onPress={console.log} title="Start" />
-  </>)
+  </View>)
 }
 
 export default SessionScreen
