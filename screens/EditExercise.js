@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, TextInput, Text, StyleSheet, Button } from 'react-native'
-import FingerBoard from '../src/assets/fingerboard-web.jsx'
+import FingerBoard from '../components/FingerboardWeb.jsx'
 
 const repetitionType = 'repetition'
 const durationType = 'duration'

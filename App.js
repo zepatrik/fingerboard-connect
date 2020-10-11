@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import EditExercise from './screens/EditExercise'
+import Session from './screens/Session'
 
 import HistoyScreen from './screens/HistoryScreen'
 
@@ -32,8 +33,18 @@ function AddSession() {
   )
 }
 
-const Stack = createStackNavigator()
+const HistoryStack = createStackNavigator()
 const Tab = createBottomTabNavigator()
+
+function HistoryStackScreen() {
+  return (
+    <HistoryStack.Navigator>
+     <HistoryStack.Screen name="Home" component={HistoyScreen} />             
+     <HistoryStack.Screen name="Session" component={Session} />
+    </HistoryStack.Navigator>
+);
+}
+
 
 export default function App() {
   return (
@@ -61,7 +72,7 @@ export default function App() {
           inactiveTintColor: 'gray'
         }}
       >
-        <Tab.Screen name="Home" component={HistoyScreen} />
+        <Tab.Screen name="Home" component={HistoryStackScreen} />
         <Tab.Screen name="Add" component={AddSession} />
         <Tab.Screen name="Exercise" component={EditExercise} />
         <Tab.Screen name="Social" component={Social} />
