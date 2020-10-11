@@ -5,7 +5,8 @@ import {
   ScrollView,
   Text,
   FlatList,
-  Dimensions
+  Dimensions,
+  TouchableOpacity
 } from 'react-native'
 import IoniconsIcon from 'react-native-vector-icons/Ionicons'
 
@@ -65,7 +66,7 @@ function HistoyScreen({navigation}) {
         style={{ width: '100%' }}
         data={sessions}
         renderItem={({ item }) => (
-          <View style={styles.cards}  onStartShouldSetResponder={()=>navigation.navigate('Session')}>
+          <TouchableOpacity style={styles.cards}  onPress={()=>navigation.navigate('Session')}>
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.dates}>
               {item.dates[0].toLocaleDateString()}
@@ -81,7 +82,7 @@ function HistoyScreen({navigation}) {
             ></IoniconsIcon>
             <Text style={styles.times}>{item.dates.length}</Text>
             <Text style={styles.exercises}>Exercises</Text>
-          </View>
+          </TouchableOpacity>
         )}
       ></FlatList>
     </View>
